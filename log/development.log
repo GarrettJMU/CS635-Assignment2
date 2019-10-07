@@ -27,3 +27,31 @@ Processing by SpreadsheetController#index as HTML
 Completed 200 OK in 676ms (Views: 673.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-10-06 23:29:23 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/equation.html.erb within layouts/application
+  Rendered spreadsheet/equation.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 232ms (Views: 223.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-06 23:29:40 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/equation.html.erb within layouts/application
+  Rendered spreadsheet/equation.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-06 23:30:25 -0700
+Processing by SpreadsheetController#equation as HTML
+  Rendering spreadsheet/equation.html.erb within layouts/application
+  Rendered spreadsheet/equation.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-06 23:30:26 -0700
+Processing by SpreadsheetController#equation as HTML
+  Rendering spreadsheet/equation.html.erb within layouts/application
+  Rendered spreadsheet/equation.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+

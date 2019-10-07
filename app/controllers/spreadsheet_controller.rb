@@ -1,5 +1,9 @@
 class SpreadsheetController < ApplicationController
-  def index
-    # render json: { foo: "bar" }
+  def equation
+    render 'equation'
+  end
+
+  def value
+    render 'value'
   end
 end
