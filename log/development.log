@@ -1,0 +1,29 @@
+Started GET "/" for ::1 at 2019-10-06 21:58:05 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/garretthughes/.rvm/gems/ruby-2.3.6/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/garretthughes/.rvm/gems/ruby-2.3.6/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.1ms)
+Completed 200 OK in 21ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-06 22:43:55 -0700
+Processing by SpreadsheetController#index as HTML
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-06 22:44:30 -0700
+Processing by SpreadsheetController#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-06 22:44:30 -0700
+Processing by SpreadsheetController#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-06 22:44:35 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/index.html.erb within layouts/application
+  Rendered spreadsheet/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 676ms (Views: 673.9ms | ActiveRecord: 0.0ms)
+
+
