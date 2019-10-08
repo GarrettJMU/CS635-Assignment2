@@ -693,3 +693,363 @@ Processing by SpreadsheetController#value as HTML
 Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-10-07 01:54:09 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.6ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-07 02:11:27 -0700
+Processing by SpreadsheetController#value as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/spreadsheet_controller.rb:13:in `instantiate_if_needed'
+Started GET "/" for ::1 at 2019-10-07 02:11:36 -0700
+Processing by SpreadsheetController#value as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/spreadsheet_controller.rb:13:in `instantiate_if_needed'
+Started GET "/" for ::1 at 2019-10-07 02:11:38 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-07 02:11:39 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-07 02:14:22 -0700
+Processing by SpreadsheetController#value as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SpreadsheetController::SpreadsheetCell):
+  
+app/controllers/spreadsheet_controller.rb:13:in `instantiate_if_needed'
+Started GET "/" for ::1 at 2019-10-07 02:15:21 -0700
+Processing by SpreadsheetController#value as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SpreadsheetController::SpreadsheetCell):
+  
+app/controllers/spreadsheet_controller.rb:13:in `instantiate_if_needed'
+Started GET "/" for ::1 at 2019-10-07 02:15:23 -0700
+Processing by SpreadsheetController#value as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant UseCases):
+  
+app/controllers/spreadsheet_controller.rb:13:in `instantiate_if_needed'
+Started GET "/" for ::1 at 2019-10-07 02:15:25 -0700
+Processing by SpreadsheetController#value as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant UseCases):
+  
+app/controllers/spreadsheet_controller.rb:13:in `instantiate_if_needed'
+Started GET "/" for ::1 at 2019-10-07 02:16:17 -0700
+Processing by SpreadsheetController#value as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant UseCases):
+  
+app/controllers/spreadsheet_controller.rb:13:in `instantiate_if_needed'
+Started GET "/" for ::1 at 2019-10-07 02:16:19 -0700
+  
+TypeError (wrong argument type String (expected Module)):
+  
+app/controllers/spreadsheet_controller.rb:3:in `include'
+app/controllers/spreadsheet_controller.rb:3:in `<class:SpreadsheetController>'
+app/controllers/spreadsheet_controller.rb:1:in `<main>'
+Started GET "/equation" for ::1 at 2019-10-07 02:16:35 -0700
+  
+TypeError (wrong argument type String (expected Module)):
+  
+app/controllers/spreadsheet_controller.rb:3:in `include'
+app/controllers/spreadsheet_controller.rb:3:in `<class:SpreadsheetController>'
+app/controllers/spreadsheet_controller.rb:1:in `<main>'
+Started GET "/equation" for ::1 at 2019-10-07 02:17:14 -0700
+Processing by SpreadsheetController#equation as HTML
+  Rendering spreadsheet/equation.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.5ms)
+  Rendered spreadsheet/equation.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/equation" for ::1 at 2019-10-07 02:17:16 -0700
+Processing by SpreadsheetController#equation as HTML
+  Rendering spreadsheet/equation.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/equation.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/equation" for ::1 at 2019-10-07 02:17:27 -0700
+Processing by SpreadsheetController#equation as HTML
+  Rendering spreadsheet/equation.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/equation.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/equation" for ::1 at 2019-10-07 02:17:28 -0700
+Processing by SpreadsheetController#equation as HTML
+  Rendering spreadsheet/equation.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/equation.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-07 02:17:35 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-07 02:18:03 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `value' for #<Concerns::SpreadsheetCell:0x00007fc3e9e19df8>
+Did you mean?  values
+               values=):
+     5:   <%= render "header_row" %>
+     6:   <div style="height: 60px;; display: inline-flex; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid black;">
+     7:     <div style="height: 60px; width: 90px; border-right: 3px solid black; text-align: center; align-items: center;">
+     8:       <p><%= @cell1.value %></p>
+     9:     </div>
+    10:     <div style="height: 60px; width: 90px; border-right: 3px solid black;text-align: center">
+    11:       <p>$B</p>
+  
+app/views/spreadsheet/value.html.erb:8:in `_app_views_spreadsheet_value_html_erb___1928404111768258542_70239716030820'
+app/controllers/spreadsheet_controller.rb:10:in `value'
+Started GET "/" for ::1 at 2019-10-07 02:18:12 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-07 02:19:01 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-07 02:27:30 -0700
+Processing by SpreadsheetController#value as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (Unable to autoload constant Spreadsheet, expected /Users/garretthughes/repositories/School/635/CS635-Assignment2/app/controllers/concerns/spreadsheet.rb to define it):
+  
+app/controllers/spreadsheet_controller.rb:14:in `instantiate_if_needed'
+Started GET "/" for ::1 at 2019-10-07 02:27:41 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.5ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_value' for nil:NilClass):
+     6:   <div style="height: 60px;; display: inline-flex; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid black;">
+     7:     <div style="height: 60px; width: 90px; border-right: 3px solid black; text-align: center; align-items: center;">
+     8:       <p>
+     9:         <%= @spreadsheet.cell1.current_value %>
+    10:       </p>
+    11:     </div>
+    12:     <div style="height: 60px; width: 90px; border-right: 3px solid black;text-align: center">
+  
+app/views/spreadsheet/value.html.erb:9:in `_app_views_spreadsheet_value_html_erb___1928404111768258542_70239686108040'
+app/controllers/spreadsheet_controller.rb:10:in `value'
+Started GET "/" for ::1 at 2019-10-07 02:27:43 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_value' for nil:NilClass):
+     6:   <div style="height: 60px;; display: inline-flex; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid black;">
+     7:     <div style="height: 60px; width: 90px; border-right: 3px solid black; text-align: center; align-items: center;">
+     8:       <p>
+     9:         <%= @spreadsheet.cell1.current_value %>
+    10:       </p>
+    11:     </div>
+    12:     <div style="height: 60px; width: 90px; border-right: 3px solid black;text-align: center">
+  
+app/views/spreadsheet/value.html.erb:9:in `_app_views_spreadsheet_value_html_erb___1928404111768258542_70239658307360'
+app/controllers/spreadsheet_controller.rb:10:in `value'
+Started GET "/" for ::1 at 2019-10-07 02:28:00 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_value' for nil:NilClass):
+     6:   <div style="height: 60px;; display: inline-flex; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid black;">
+     7:     <div style="height: 60px; width: 90px; border-right: 3px solid black; text-align: center; align-items: center;">
+     8:       <p>
+     9:         <%= @spreadsheet.cell1.current_value %>
+    10:       </p>
+    11:     </div>
+    12:     <div style="height: 60px; width: 90px; border-right: 3px solid black;text-align: center">
+  
+app/views/spreadsheet/value.html.erb:9:in `_app_views_spreadsheet_value_html_erb___1928404111768258542_70239716024400'
+app/controllers/spreadsheet_controller.rb:10:in `value'
+Started GET "/" for ::1 at 2019-10-07 02:28:01 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.6ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_value' for nil:NilClass):
+     6:   <div style="height: 60px;; display: inline-flex; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid black;">
+     7:     <div style="height: 60px; width: 90px; border-right: 3px solid black; text-align: center; align-items: center;">
+     8:       <p>
+     9:         <%= @spreadsheet.cell1.current_value %>
+    10:       </p>
+    11:     </div>
+    12:     <div style="height: 60px; width: 90px; border-right: 3px solid black;text-align: center">
+  
+app/views/spreadsheet/value.html.erb:9:in `_app_views_spreadsheet_value_html_erb___1928404111768258542_70239709021540'
+app/controllers/spreadsheet_controller.rb:10:in `value'
+Started GET "/" for ::1 at 2019-10-07 02:28:19 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_value' for nil:NilClass):
+     6:   <div style="height: 60px;; display: inline-flex; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid black;">
+     7:     <div style="height: 60px; width: 90px; border-right: 3px solid black; text-align: center; align-items: center;">
+     8:       <p>
+     9:         <%= @spreadsheet.cell1.current_value %>
+    10:       </p>
+    11:     </div>
+    12:     <div style="height: 60px; width: 90px; border-right: 3px solid black;text-align: center">
+  
+app/views/spreadsheet/value.html.erb:9:in `_app_views_spreadsheet_value_html_erb___1928404111768258542_70239707581020'
+app/controllers/spreadsheet_controller.rb:10:in `value'
+Started GET "/" for ::1 at 2019-10-07 02:29:01 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `cell1' for nil:NilClass):
+     6:   <div style="height: 60px;; display: inline-flex; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid black;">
+     7:     <div style="height: 60px; width: 90px; border-right: 3px solid black; text-align: center; align-items: center;">
+     8:       <p>
+     9:         <%= @spreadsheet.cell1.current_value %>
+    10:       </p>
+    11:     </div>
+    12:     <div style="height: 60px; width: 90px; border-right: 3px solid black;text-align: center">
+  
+app/views/spreadsheet/value.html.erb:9:in `_app_views_spreadsheet_value_html_erb___1928404111768258542_70239708846500'
+app/controllers/spreadsheet_controller.rb:10:in `value'
+Started GET "/" for ::1 at 2019-10-07 02:29:11 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-07 02:29:12 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-07 02:33:41 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-07 02:37:41 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for #<Concerns::SpreadsheetCell:0x00007fc3e3dae3b0>):
+     6:   <div style="height: 60px;; display: inline-flex; border-bottom: 3px solid black; border-left: 3px solid black; border-right: 3px solid black;">
+     7:     <div style="height: 60px; width: 90px; border-right: 3px solid black; text-align: center; align-items: center;">
+     8:       <p>
+     9:         <%= form_for @cell1 do |f| %>
+    10:           <%= f.label :email, f.current_value %>
+    11:           <%= f.submit "Submit" %>
+    12:         <% end %>
+  
+app/views/spreadsheet/value.html.erb:9:in `_app_views_spreadsheet_value_html_erb___1928404111768258542_70239659057160'
+app/controllers/spreadsheet_controller.rb:10:in `value'
+Started GET "/" for ::1 at 2019-10-07 17:46:33 -0700
+Processing by SpreadsheetController#value as HTML
+  Rendering spreadsheet/value.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (1.7ms)
+  Rendered spreadsheet/value.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 81ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
