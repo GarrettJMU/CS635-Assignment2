@@ -3,7 +3,9 @@
   <input name="state" value="<%= @spreadsheet.current_view %>" type="hidden" />
   <button type="submit">Change View</button>
 </form>
-
+<form action="/undo" method="post">
+  <button type="submit">Undo</button>
+</form>
 <div style="height: 120px;">
   <%= render "header_row" %>
   <div style="height: 60px;; display: inline-flex; border-bottom: 3px solid black; border-left: 3px solid black;">

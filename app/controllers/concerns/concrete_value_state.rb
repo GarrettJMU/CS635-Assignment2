@@ -9,6 +9,7 @@ module Concerns
     def handle_value_view(cell = nil, value = nil)
       cell.value_view = value
       cell.current_value = value
+      cell.changed
       cell.notify_observers
     end
 
@@ -18,6 +19,6 @@ module Concerns
       end
       @context.transition_to(::Concerns::ConcreteExpressionState.new)
     end
+
   end
 end
-

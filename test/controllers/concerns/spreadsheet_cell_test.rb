@@ -15,16 +15,16 @@ class SpreadsheetCellTest < ActionDispatch::IntegrationTest
     described_class = ::Concerns::SpreadsheetCell.new
     second_cell = ::Concerns::SpreadsheetCell.new
     described_class.add_observer(second_cell)
-    assert_equal(described_class.observers.length, 1)
+    assert_equal(described_class.count_observers, 1)
   end
 
   test 'removing observers' do
     described_class = ::Concerns::SpreadsheetCell.new
     second_cell = ::Concerns::SpreadsheetCell.new
     described_class.add_observer(second_cell)
-    assert_equal(described_class.observers.length, 1)
+    assert_equal(described_class.count_observers, 1)
 
     described_class.delete_observers
-    assert_equal(described_class.observers.length, 0)
+    assert_equal(described_class.count_observers, 0)
   end
 end

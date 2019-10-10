@@ -1,8 +1,9 @@
+require "observer"
+
 module Concerns
   class ContextParser
-    attr_accessor :context
     
-    def parse(expression, cell)
+    def parse(expression, cell, context)
       return if expression.blank?
       stack = []
 
@@ -71,5 +72,6 @@ module Concerns
 
       stack.first.execute
     end
+
   end
 end

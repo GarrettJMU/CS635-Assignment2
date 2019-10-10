@@ -41,26 +41,32 @@ class ContextParserTest < ActionDispatch::IntegrationTest
   end
 
   test '+ operation' do
-    assert_equal(::Concerns::ContextParser.new.parse('2 1 +', 1), 3)
+    spreadhsheet = Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
+    assert_equal(::Concerns::ContextParser.new.parse('2 1 +', 1, spreadhsheet), 3)
   end
 
   test '- operation' do
-    assert_equal(::Concerns::ContextParser.new.parse('2 1 -', 1), 1)
+    spreadhsheet = Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
+    assert_equal(::Concerns::ContextParser.new.parse('2 1 -', 1,spreadhsheet), 1)
   end
 
   test '* operation' do
-    assert_equal(::Concerns::ContextParser.new.parse('2 3 *',1), 6)
+    spreadhsheet = Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
+    assert_equal(::Concerns::ContextParser.new.parse('2 3 *',1, spreadhsheet), 6)
   end
 
   test '/ operation' do
-    assert_equal(::Concerns::ContextParser.new.parse('2 4 /', 1), 0.5)
+    spreadhsheet = Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
+    assert_equal(::Concerns::ContextParser.new.parse('2 4 /', 1, spreadhsheet), 0.5)
   end
 
   test 'lg operation' do
-    assert_equal(::Concerns::ContextParser.new.parse('2 lg ',1 ), Math.log2(2))
+    spreadhsheet = Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
+    assert_equal(::Concerns::ContextParser.new.parse('2 lg ',1, spreadhsheet ), Math.log2(2))
   end
 
   test 'sin operation' do
-    assert_equal(::Concerns::ContextParser.new.parse('2 sin', 1), Math.sin(2))
+    spreadhsheet = Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
+    assert_equal(::Concerns::ContextParser.new.parse('2 sin', 1, spreadhsheet), Math.sin(2))
   end
 end

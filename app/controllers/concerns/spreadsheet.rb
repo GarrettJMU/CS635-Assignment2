@@ -7,7 +7,6 @@ module Concerns
       @cells = []
       @current_view = 'Value'
       @context_parser = ::Concerns::ContextParser.new
-      @context_parser.context = self
 
       1..9.times { @cells.push(SpreadsheetCell.new) }
       transition_to(state)
@@ -17,6 +16,10 @@ module Concerns
       @state = state
       @state.context = self
       @current_view = @state.value
+
+      @cells.each do |cell|
+        cell.state = state
+      end
     end
 
     def handle_value_view(cell = nil, value = nil)
@@ -29,7 +32,7 @@ module Concerns
     end
 
     def parse(context, cell)
-      @context_parser.parse(context, cell)
+      @context_parser.parse(context, cell, self)
     end
 
   end

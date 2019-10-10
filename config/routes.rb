@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   #
   post '/update', to: 'spreadsheet#update'
   post '/change_view', to: 'spreadsheet#change_view'
+  post '/undo', to: 'spreadsheet#undo'
+
   root 'spreadsheet#index'
 
 end

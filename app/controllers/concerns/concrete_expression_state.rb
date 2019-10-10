@@ -14,10 +14,14 @@ module Concerns
     end
 
     def handle_equation_view(cell = nil, parsed_value = nil, expression_value = nil)
+      puts '#################'
+      puts 'hittin here'
+      puts '#################'
       cell.expression_view = expression_value
       cell.value_view = parsed_value
       cell.current_value = cell.expression_view || cell.value_view
-      cell.notify_observers if cell.observers.length > 0
+      cell.changed
+      cell.notify_observers(@context)
     end
   end
 end

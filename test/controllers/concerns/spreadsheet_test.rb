@@ -132,7 +132,7 @@ class SpreadsheetTest < ActionDispatch::IntegrationTest
 
   end
 
-  test 'observers' do
+  test 'observers properly update' do
     described_class = ::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
     described_class.cells[0].value_view = '1'
     described_class.handle_equation_view
@@ -140,10 +140,10 @@ class SpreadsheetTest < ActionDispatch::IntegrationTest
 
     assert_equal(described_class.cells[0].current_value, "1")
     assert_equal(described_class.cells[1].value_view, 6)
+    assert_equal(described_class.cells[0].count_observers, 1)
 
-    # described_class.handle_value_view
-    # described_class.handle_equation_view(described_class.cells[0], '2')
-    # assert_equal(described_class.cells[1].value_view, 12.0)
+    described_class.handle_equation_view(described_class.cells[0], '2')
+    assert_equal(described_class.cells[1].value_view, 12.0)
   end
 
   # test 'circular dependency' do
@@ -159,23 +159,6 @@ class SpreadsheetTest < ActionDispatch::IntegrationTest
   #   assert_equal(described_class.cells[1].value_view, 1.0)
   #   assert_equal(described_class.cells[2].value_view, 1.0)
   #   assert_equal(described_class.cells[3].value_view, 2.0)
-  # end
-
-
-
-  # test 'that when the view is updated the cells are notified' do
-    # described_class = ::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
-    # described_class.cells[0].equation_view = "0 2 +"
-    # described_class.cells[0].value_view = "2"
-    #
-    # assert_equal(described_class.current_view, 'Value')
-    # described_class.change_view
-    # assert_equal(described_class.current_view, 'Expression')
-    # assert_equal(described_class.cells[0].current_value, "0 2 +")
-    #
-    # described_class.change_view
-    # assert_equal(described_class.current_view, 'Value')
-    # assert_equal(described_class.cells[0].current_value, "2")
   # end
 
 end

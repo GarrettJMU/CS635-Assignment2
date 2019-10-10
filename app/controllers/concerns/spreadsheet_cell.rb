@@ -1,6 +1,9 @@
+require "observer"
+
 module Concerns
-  class SpreadsheetCell < Spreadsheet
-    attr_accessor :observers, :value_view, :expression_view, :current_value
+  class SpreadsheetCell
+    include Observable
+    attr_accessor :observers, :value_view, :expression_view, :current_value, :state
 
     def initialize
       @current_value = nil
@@ -9,27 +12,13 @@ module Concerns
       @value_view = nil
     end
 
-    def add_observer(observer)
-      @observers << observer
-    end
-
-    def delete_observers
-      @observers = []
-    end
-
-
     def handle_equation_view
       super(self, self.expression_view)
     end
 
-    def update
-      method(:handle_equation_view).super_method.call
+    def update(context)
+      context.handle_equation_view(self, self.expression_view)
     end
 
-    def notify_observers
-      @observers.each do |observer|
-        observer.update
-      end
-    end
   end
 end
