@@ -62,28 +62,35 @@ class SpreadsheetTest < ActionDispatch::IntegrationTest
   end
 
   test '+ operation' do
-    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 1 +'), 3)
+    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 1 +', 1), 3)
   end
 
   test '- operation' do
-    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 1 -'), 1)
+    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 1 -', 1), 1)
   end
 
   test '* operation' do
-    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 3 *'), 6)
+    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 3 *',1), 6)
   end
 
   test '/ operation' do
-    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 4 /'), 0.5)
+    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 4 /', 1), 0.5)
   end
 
   test 'lg operation' do
-    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 lg'), Math.log2(2))
+    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 lg ',1 ), Math.log2(2))
   end
 
   test 'sin operation' do
-    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 sin'), Math.sin(2))
+    assert_equal(::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new).parse('2 sin', 1), Math.sin(2))
   end
+
+  test 'value view' do
+    described_class = ::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
+    described_class.handle_value_view(0, '1')
+    assert_equal(described_class.cells[0].val, 1)
+  end
+
 
 
   # test 'that when the view is updated the cells are notified' do

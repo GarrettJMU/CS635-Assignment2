@@ -8,7 +8,7 @@ module Concerns
       end
 
       def execute
-        value
+        value.to_f
       end
     end
   end

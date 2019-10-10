@@ -5345,3 +5345,805 @@ Processing by SpreadsheetController#index as HTML
 Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-10-10 02:15:33 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:15:33 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:15:41 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:15:46 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"2", "index"=>"1", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 76ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:15:53 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 80ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:19:01 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.5ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:19:02 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:19:03 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:19:04 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:19:06 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 76ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:19:08 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"1", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 79ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:19:10 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `current_view=' for #<Concerns::SpreadsheetCell:0x00007faeff956e00>
+Did you mean?  current_value=
+               current_index=
+               current_index
+               current_value):
+  
+app/controllers/concerns/concrete_value_state.rb:15:in `block in handle_equation_view'
+app/controllers/concerns/concrete_value_state.rb:14:in `each'
+app/controllers/concerns/concrete_value_state.rb:14:in `handle_equation_view'
+app/controllers/concerns/spreadsheet.rb:26:in `handle_equation_view'
+app/controllers/spreadsheet_controller.rb:21:in `change_view'
+Started GET "/" for ::1 at 2019-10-10 02:19:35 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:19:36 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:19:36 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:19:38 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 82ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:19:40 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"1", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:19:41 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 80ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:19:42 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:19:48 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"$A $B +", "index"=>"2", "state"=>"Expression"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 80ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:19:51 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Expression"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:19:52 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:20:14 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:20:15 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:22:14 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:22:15 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:22:34 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:22:37 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 76ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:22:38 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"1", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:22:42 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"2", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:22:44 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0..2)):
+  
+app/controllers/concerns/concrete_value_state.rb:13:in `handle_equation_view'
+app/controllers/concerns/spreadsheet.rb:26:in `handle_equation_view'
+app/controllers/spreadsheet_controller.rb:21:in `change_view'
+Started GET "/" for ::1 at 2019-10-10 02:25:05 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:25:08 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 79ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:25:10 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"1", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:25:11 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 80ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:25:12 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:25:14 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Expression"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 79ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:25:14 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:25:16 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:25:16 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:25:22 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"$A $B +", "index"=>"2", "state"=>"Expression"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 85ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:25:24 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Expression"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:25:25 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:28:14 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"2", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 75ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:28:16 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:28:19 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:28:21 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:28:22 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"1", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 81ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:28:24 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 85ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:28:28 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"$A $B +", "index"=>"2", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:28:29 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:28:30 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:28:34 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"$A $B +", "index"=>"2", "state"=>"Expression"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 82ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:28:43 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Expression"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:28:43 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:28:46 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"2", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:28:47 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:28:50 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"2", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:28:51 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:29:22 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:29:25 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"2", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:29:27 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:35:43 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:35:44 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:35:45 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:35:47 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 93ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:35:49 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"2", "index"=>"1", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:35:50 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:35:51 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:35:54 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"$A $B +", "index"=>"2", "state"=>"Expression"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 83ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:35:56 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:36:03 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:36:29 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"$A $B +", "index"=>"2", "state"=>"Expression"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:36:34 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:37:04 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:37:06 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Expression"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:37:06 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:37:23 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:37:24 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 79ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:37:25 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:37:28 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:37:30 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"2", "index"=>"0", "state"=>"Expression"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:37:32 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Expression"}
+No template found for SpreadsheetController#change_view, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:37:33 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:37:40 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"3", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:37:42 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:37:45 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"3", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:37:46 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:37:48 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"3", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 82ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:37:49 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:41:06 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:41:07 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:41:09 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 82ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:41:10 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"1", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:41:12 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:41:13 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/change_view" for ::1 at 2019-10-10 02:41:15 -0700
+Processing by SpreadsheetController#change_view as HTML
+  Parameters: {"state"=>"Value"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion from nil to integer):
+  
+app/controllers/concerns/spreadsheet.rb:25:in `[]'
+app/controllers/concerns/spreadsheet.rb:25:in `handle_equation_view'
+app/controllers/spreadsheet_controller.rb:21:in `change_view'
+Started GET "/" for ::1 at 2019-10-10 02:41:19 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:41:20 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:41:22 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"0", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 79ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/update" for ::1 at 2019-10-10 02:41:23 -0700
+Processing by SpreadsheetController#update as HTML
+  Parameters: {"value"=>"1", "index"=>"1", "state"=>"Value"}
+No template found for SpreadsheetController#update, rendering head :no_content
+Completed 204 No Content in 81ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:41:24 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.4ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:41:46 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.2ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-10 02:41:47 -0700
+Processing by SpreadsheetController#index as HTML
+  Rendering spreadsheet/spreadsheet.html.erb within layouts/application
+  Rendered spreadsheet/_header_row.html.erb (0.3ms)
+  Rendered spreadsheet/spreadsheet.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
