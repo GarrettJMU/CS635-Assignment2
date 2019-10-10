@@ -20,6 +20,10 @@ module Concerns
       end
     end
 
+    def update(observee)
+
+    end
+
     def notify_observers
       @observers.each do |observer|
         observer.update(self)

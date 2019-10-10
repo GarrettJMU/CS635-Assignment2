@@ -8,6 +8,7 @@ module Concerns
 
     def handle_value_view(index = nil, value = nil)
       @context.cells[index].value_view = value
+      @context.cells[index].current_value = value
     end
 
     def handle_equation_view(index = nil, value = nil, parsed_value = nil)
