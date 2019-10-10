@@ -1,0 +1,26 @@
+<h1><%= @spreadsheet.current_view %></h1>
+<form action="/change_view" method="post">
+  <input name="state" value="<%= @spreadsheet.current_view %>" type="hidden" />
+  <button type="submit">Change View</button>
+</form>
+
+<div style="height: 120px;">
+  <%= render "header_row" %>
+  <div style="height: 60px;; display: inline-flex; border-bottom: 3px solid black; border-left: 3px solid black;">
+
+    <% @spreadsheet.cells.each_with_index do |cell, i| %>
+      <div style="height: 60px; width: 90px; border-right: 3px solid black; text-align: center; align-items: center;">
+        <p>
+        <form action="/update" method="post">
+          <input name="value" value="<%= cell.current_value %>" style="width: 60px" />
+          <input name="index" value="<%= i %>" style="width: 60px" type="hidden" />
+          <input name="state" value="<%= @spreadsheet.current_view %>" style="width: 60px" type="hidden" />
+          <button type="submit" formtarget="_top">Submit</button>
+        </form>
+        </p>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>

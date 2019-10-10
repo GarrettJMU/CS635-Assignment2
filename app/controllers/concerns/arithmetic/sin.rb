@@ -9,7 +9,7 @@ module Concerns
       end
 
       def execute
-        Math.sin(left)
+        Math.sin(left.execute)
       end
 
     end

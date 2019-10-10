@@ -1,41 +1,57 @@
 module Concerns
   class SpreadsheetCell
 
-    attr_accessor :values, :observers, :current_index
-    attr_reader :current_value
+    attr_accessor :values, :observers, :current_index, :value_view, :expression_view, :current_value, :state
 
-    def initalize
-      @current_value = values[current_index]
-      @values = []
-      @current_index = 0
+    def initialize
+      @current_value = nil
       @observers = []
+      @expression_view = nil
+      @value_view = nil
     end
 
-    def undo
-      current_index === 0 ? 0 : (current_index -= 1)
+    # def transition_to(state)
+    #   @state = state
+    #   @state.context = self
+    #   @current_view = @state.value
+    #
+    #   if @current_view === 'Expression'
+    #     @cells.each do |cell|
+    #       cell.update_view
+    #     end
+    #   else
+    #     @cells.each do |cell|
+    #       # cell.update_view
+    #     end
+    #   end
+    # end
+
+
+    def update_value(value)
+      @current_value = value
     end
 
-    def redo
-      current_index === 0 ? nil : (current_index += 1)
-    end
+    # def create_memento
+    #   @memento = ::Concerns::Memento.new(@state)
+    # end
+    #
+    # def restore_memento(memento)
+    #   @memento = memento
+    #   @state  = memento.state
+    # end
 
     def add_observer(observer)
-      observers << observer
+      @observers << observer
     end
 
     def delete_observer(observer)
-      observer.delete(observer)
+      @observers.delete(observer)
     end
 
     def notify_observers
-      observers.each do |observer|
+      @observers.each do |observer|
         observer.update(self)
       end
     end
-
-    def update(cell)
-
-    end
-
   end
 end

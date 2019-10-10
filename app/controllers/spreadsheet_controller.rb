@@ -1,26 +1,37 @@
 class SpreadsheetController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :instantiate_if_needed
-  # include './concerns/spreadsheet_cell.rb'
 
-  def equation
-    render 'equation'
-  end
+  # This is an anti-pattern, as I've essentially turned http requests from stateless to stateful,
+  # but I did so for the sake of this assignment so I had something visual I could put in portfolio that is hosted.
+  # As you can see I only instantiate the class once and all subsequent calls are done so on the same class variable
 
-  def value
-    render 'value'
+  @@spreadsheet ||= ::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
+
+  def index
+    render 'spreadsheet'
   end
 
   def instantiate_if_needed
-    # @spreadsheet =
-    @cell1 ||= ::Concerns::SpreadsheetCell.new
-    @cell2 ||= ::Concerns::SpreadsheetCell.new
-    @cell3 ||= ::Concerns::SpreadsheetCell.new
-    @cell4 ||= ::Concerns::SpreadsheetCell.new
-    @cell5 ||= ::Concerns::SpreadsheetCell.new
-    @cell6 ||= ::Concerns::SpreadsheetCell.new
-    @cell7 ||= ::Concerns::SpreadsheetCell.new
-    @cell8 ||= ::Concerns::SpreadsheetCell.new
-    @cell9 ||= ::Concerns::SpreadsheetCell.new
+    @spreadsheet ||= @@spreadsheet
+  end
+
+  def change_view
+    if params[:state] === 'Value'
+      @@spreadsheet.handle_equation_view
+    else
+      @@spreadsheet.handle_value_view
+    end
+  end
+
+  def update
+    cell_index = params[:index].to_i
+    value = params[:value].to_s
+    if params[:state] === 'Value'
+      @@spreadsheet.handle_value_view(cell_index, value)
+    else
+      @@spreadsheet.handle_equation_view(cell_index, value)
+    end
   end
 
 end

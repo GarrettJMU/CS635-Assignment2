@@ -1,6 +1,6 @@
 module Concerns
   module Arithmetic
-    class Sin
+    class Log
 
       attr_reader :left
 
@@ -9,7 +9,7 @@ module Concerns
       end
 
       def execute
-        Math.log2(left)
+        Math.log2(left.execute)
       end
 
     end

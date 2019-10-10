@@ -10,7 +10,7 @@ module Concerns
       end
 
       def execute
-        left * right
+        left.execute * right.execute
       end
 
     end

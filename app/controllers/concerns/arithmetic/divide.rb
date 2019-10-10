@@ -10,7 +10,7 @@ module Concerns
       end
 
       def execute
-        left / right
+        left.execute.to_f / right.execute.to_f
       end
 
     end
