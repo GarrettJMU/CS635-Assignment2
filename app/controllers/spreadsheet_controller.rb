@@ -34,4 +34,8 @@ class SpreadsheetController < ApplicationController
     end
   end
 
+  def undo
+    @@spreadsheet
+  end
+
 end

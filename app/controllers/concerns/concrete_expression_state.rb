@@ -17,7 +17,7 @@ module Concerns
       cell.expression_view = expression_value
       cell.value_view = parsed_value
       cell.current_value = cell.expression_view || cell.value_view
-      cell.notify_observers
+      cell.notify_observers if cell.observers.length > 0
     end
   end
 end
