@@ -28,9 +28,9 @@ class SpreadsheetController < ApplicationController
     cell_index = params[:index].to_i
     value = params[:value].to_s
     if params[:state] === 'Value'
-      @@spreadsheet.handle_value_view(cell_index, value)
+      @@spreadsheet.handle_value_view(@@spreadsheet.cells[cell_index], value)
     else
-      @@spreadsheet.handle_equation_view(cell_index, value)
+      @@spreadsheet.handle_equation_view(@@spreadsheet.cells[cell_index], value)
     end
   end
 

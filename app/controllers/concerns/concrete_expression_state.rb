@@ -6,19 +6,18 @@ module Concerns
       @value = 'Expression'
     end
 
-    def handle_value_view(index = nil, value = nil)
-      @context.cells.each do |cell|
-        cell.current_value = cell.value_view
+    def handle_value_view(cell = nil, value = nil)
+      @context.cells.each do |c|
+        c.current_value = c.value_view
       end
       @context.transition_to(::Concerns::ConcreteValueState.new)
     end
 
-    def handle_equation_view(index = nil, parsed_value = nil, expression_value = nil)
-      current_cell = @context.cells[index]
-      current_cell.expression_view = expression_value
-      current_cell.value_view = parsed_value
-      current_cell.current_value = current_cell.expression_view || current_cell.value_view
-
+    def handle_equation_view(cell = nil, parsed_value = nil, expression_value = nil)
+      cell.expression_view = expression_value
+      cell.value_view = parsed_value
+      cell.current_value = cell.expression_view || cell.value_view
+      cell.notify_observers
     end
   end
 end

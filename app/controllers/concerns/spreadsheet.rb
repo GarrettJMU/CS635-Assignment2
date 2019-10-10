@@ -17,20 +17,19 @@ module Concerns
       @current_view = @state.value
     end
 
-    def handle_value_view(index = nil, value = nil)
-      @state.handle_value_view(index, value)
+    def handle_value_view(cell = nil, value = nil)
+      @state.handle_value_view(cell, value)
     end
 
-    def handle_equation_view(index = nil, value = nil, parsed = nil)
-      @cells[index].delete_observers if index.present?
-      parsed_value = parse(value, index)
+    def handle_equation_view(cell = nil, value = nil, parsed = nil)
+      cell.delete_observers if cell.present?
+      parsed_value = parse(value, cell)
 
-      @state.handle_equation_view(index, parsed_value, value)
+      @state.handle_equation_view(cell, parsed_value, value)
     end
 
-    def parse(context, index)
+    def parse(context, cell)
       return if context.blank?
-
       stack = []
 
       context.lstrip!
@@ -40,31 +39,31 @@ module Concerns
           stack << ::Concerns::Arithmetic::Number.new($&.to_i)
         when /\A\$A/
           stack << ::Concerns::Arithmetic::Number.new(@cells[0].value_view)
-          @cells[index].add_observer(@cells[0])
+          cell.add_observer(@cells[0])
         when /\A\$B/
           stack << ::Concerns::Arithmetic::Number.new(@cells[1].value_view)
-          @cells[index].add_observer(@cells[1])
+          cell.add_observer(@cells[1])
         when /\A\$C/
           stack << ::Concerns::Arithmetic::Number.new(@cells[2].value_view)
-          @cells[index].add_observer(@cells[2])
+          cell.add_observer(@cells[2])
         when /\A\$D/
           stack << ::Concerns::Arithmetic::Number.new(@cells[3].value_view)
-          @cells[index].add_observer(@cells[3])
+          cell.add_observer(@cells[3])
         when /\A\$E/
           stack << ::Concerns::Arithmetic::Number.new(@cells[4].value_view)
-          @cells[index].add_observer(@cells[4])
+          cell.add_observer(@cells[4])
         when /\A\$F/
           stack << ::Concerns::Arithmetic::Number.new(@cells[5].value_view)
-          @cells[index].add_observer(@cells[5])
+          cell.add_observer(@cells[5])
         when /\A\$G/
           stack << ::Concerns::Arithmetic::Number.new(@cells[6].value_view)
-          @cells[index].add_observer(@cells[6])
+          cell.add_observer(@cells[6])
         when /\A\$H/
           stack << ::Concerns::Arithmetic::Number.new(@cells[7].value_view)
-          @cells[index].add_observer(@cells[7])
+          cell.add_observer(@cells[7])
         when /\A\$I/
           stack << ::Concerns::Arithmetic::Number.new(@cells[8].value_view)
-          @cells[index].add_observer(@cells[8])
+          cell.add_observer(@cells[8])
         else
           case context
           when /\A\+/

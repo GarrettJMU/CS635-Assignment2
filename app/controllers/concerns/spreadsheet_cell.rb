@@ -1,5 +1,5 @@
 module Concerns
-  class SpreadsheetCell
+  class SpreadsheetCell < Spreadsheet
 
     attr_accessor :observers, :value_view, :expression_view, :current_value
 
@@ -21,7 +21,12 @@ module Concerns
     end
 
     def update(observee)
-
+      # puts '##################'
+      # puts observee.inspect
+      # puts '##################'
+      # parsed_value = parse(self.expression_view, nil, observee)
+      #
+      # handle_equation_view(current_index, parsed_value, self.expression_view)
     end
 
     def notify_observers

@@ -88,7 +88,7 @@ class SpreadsheetTest < ActionDispatch::IntegrationTest
   test 'value view' do
     described_class = ::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
     described_class.cells.each_with_index do |cell, index|
-      described_class.handle_value_view(index, "#{index}")
+      described_class.handle_value_view(cell, "#{index}")
       assert_equal(cell.value_view, "#{index}")
       assert_equal(cell.current_value, "#{index}")
     end
@@ -97,7 +97,7 @@ class SpreadsheetTest < ActionDispatch::IntegrationTest
   test 'expression view' do
     described_class = ::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
     described_class.cells.each_with_index do |cell, index|
-      described_class.handle_value_view(index, "#{index}")
+      described_class.handle_value_view(cell, "#{index}")
       assert_equal(cell.value_view, "#{index}")
       assert_equal(cell.current_value, "#{index}")
     end
@@ -105,7 +105,7 @@ class SpreadsheetTest < ActionDispatch::IntegrationTest
     described_class.handle_equation_view
 
     described_class.cells.each_with_index do |cell, index|
-      described_class.handle_equation_view(index, "#{index}")
+      described_class.handle_equation_view(cell, "#{index}")
       assert_equal(cell.expression_view, "#{index}")
       assert_equal(cell.current_value, "#{index}")
     end
@@ -116,13 +116,13 @@ class SpreadsheetTest < ActionDispatch::IntegrationTest
   test 'flipping between views' do
     described_class = ::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
     described_class.cells.each_with_index do |cell, index|
-      described_class.handle_value_view(index, "#{index}")
+      described_class.handle_value_view(cell, "#{index}")
       assert_equal(cell.value_view, "#{index}")
       assert_equal(cell.current_value, "#{index}")
     end
 
     described_class.handle_equation_view
-    described_class.handle_equation_view(0, '$I $H +')
+    described_class.handle_equation_view(described_class.cells[0], '$I $H +')
     assert_equal(described_class.cells[0].value_view, 15.0)
     assert_equal(described_class.cells[0].current_value, '$I $H +')
     assert_equal(described_class.cells[0].expression_view, '$I $H +')
@@ -136,10 +136,13 @@ class SpreadsheetTest < ActionDispatch::IntegrationTest
     described_class = ::Concerns::Spreadsheet.new(::Concerns::ConcreteValueState.new)
     described_class.cells[0].value_view = '1'
     described_class.handle_equation_view
-    described_class.handle_equation_view(1, '$A 6 *')
+    described_class.handle_equation_view(described_class.cells[1], '$A 6 *')
 
     assert_equal(described_class.cells[0].current_value, "1")
     assert_equal(described_class.cells[1].value_view, 6)
+
+    described_class.handle_equation_view(described_class.cells[0], '2')
+    assert_equal(described_class.cells[1].value_view, 12.0)
   end
 
   test 'circular dependency' do
@@ -147,9 +150,9 @@ class SpreadsheetTest < ActionDispatch::IntegrationTest
     described_class.cells[0].value_view = 1
     described_class.handle_equation_view
 
-    described_class.handle_equation_view(1, '$A $C +')
-    described_class.handle_equation_view(2, '$D 1 +')
-    described_class.handle_equation_view(3, '$B 2 *')
+    described_class.handle_equation_view(described_class.cells[1], '$A $C +')
+    described_class.handle_equation_view(described_class.cells[2], '$D 1 +')
+    described_class.handle_equation_view(described_class.cells[3], '$B 2 *')
 
     assert_equal(described_class.cells[0].current_value, 1)
     assert_equal(described_class.cells[1].value_view, 1.0)
